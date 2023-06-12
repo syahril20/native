@@ -8,6 +8,14 @@ export const Styles = StyleSheet.create({
   containerLogin: {
     marginTop: 50,
     alignItems: "center",
+    text:{
+      textAlign: "center",
+      marginTop: 10,
+      reg:{
+        color:"#FF5555",
+        fontFamily: "Poppins_700Bold",
+      },
+    },
     formArea:{
         alignItems: "center",
     },

@@ -14,7 +14,7 @@ import {
 import {} from "native-base";
 import { Styles } from "../styles";
 
-export default function Auth({ navigation }) {
+export default function Home({ navigation }) {
   let [fontsLoaded] = useFonts({
     Poppins_400Regular,
     Poppins_700Bold,
@@ -41,7 +41,9 @@ export default function Auth({ navigation }) {
             >
               <Text style={Styles.buttonText}>Login</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={Styles.buttonReg}>
+            <TouchableOpacity style={Styles.buttonReg}
+            onPress={() => navigation.navigate("Register")}
+            >
               <Text style={Styles.buttonText}>Register</Text>
             </TouchableOpacity>
           </View>

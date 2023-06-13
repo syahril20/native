@@ -1,11 +1,11 @@
 import React from "react";
 import { Text, View, Image, TouchableOpacity } from "react-native";
 import { Styles } from "../styles";
-import { NativeBaseProvider, Input, FormControl } from "native-base";
+import {  Input, FormControl } from "native-base";
 export default function Login({ navigation }) {
   return (
     <>
-      <NativeBaseProvider>
+      <>
         <View style={Styles.containerLogin}>
           <Image source={require("../../assets/logIcon.png")} />
         </View>
@@ -21,7 +21,7 @@ export default function Login({ navigation }) {
         <View style={Styles.containerLogin.buttonArea}>
           <TouchableOpacity
             style={Styles.button}
-            onPress={() => navigation.navigate("Login")}
+            onPress={() => navigation.navigate("Index")}
           >
             <Text style={Styles.buttonText}>Login</Text>
           </TouchableOpacity>
@@ -31,7 +31,7 @@ export default function Login({ navigation }) {
           New User ?{" "}
           <Text style={Styles.containerLogin.text.reg} onPress={() => navigation.navigate("Register")}>Register</Text>
         </Text>
-      </NativeBaseProvider>
+      </>
     </>
   );
 }

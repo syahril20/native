@@ -1,12 +1,12 @@
 import React from "react";
 import { Text, View, Image, TouchableOpacity } from "react-native";
 import { Styles } from "../styles";
-import { NativeBaseProvider, Input, FormControl } from "native-base";
+import {  Input, FormControl } from "native-base";
 
 export default function Register({ navigation }) {
   return (
     <>
-      <NativeBaseProvider>
+      <>
         <View style={Styles.containerLogin}>
           <Image source={require("../../assets/logIcon.png")} />
         </View>
@@ -34,7 +34,7 @@ export default function Register({ navigation }) {
           Joined us before ?{" "}
           <Text style={Styles.containerLogin.text.reg} onPress={() => navigation.navigate("Login")}>Login</Text>
         </Text>
-      </NativeBaseProvider>
+      </>
     </>
   );
 }
